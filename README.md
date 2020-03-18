@@ -100,7 +100,7 @@ environment active.
 
 Clone the repository using git:
 
-    git clone https://github.com/wlerin/showroom.git
+    git clone https://github.com/amane1234/showroom.git
 
 Or use the Download as ZIP button above.
 
