@@ -10,8 +10,6 @@
 print to the console *at all*)
 2. Most of the instructions below are also outdated. (Usage and Installation 
 still work but they are missing a lot of information.)
-3. pyyaml is not in requirements.txt (needed for config files)
-4. config file format is not fixed
 
 ## Usage
 
