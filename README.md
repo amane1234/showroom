@@ -20,21 +20,21 @@ is once again not the default mode. To run the script and download
 all streaming rooms to the data directory (by default ~/Downloads/Showroom)
 enter:
 
-    python showroom.py --all
+    python3 showroom.py --all
 
 (Using the showroom virtual environment if it was configured.)
 
 To download only specific members' rooms, use:
 
-    python showroom.py "Member Name" ["Another Member Name" ...]
+    python3 showroom.py "Member Name" ["Another Member Name" ...]
 
 To set a different data directory, use:
 
-    python showroom.py --data-dir <data directory> [--all or "Member Name"]
+    python3 showroom.py --data-dir <data directory> [--all or "Member Name"]
 
 For additional options, type:
 
-    python showroom.py --help
+    python3 showroom.py --help
 
 Or take a gander at the start.sh script.
 
@@ -110,21 +110,21 @@ All required packages can be installed by running:
 
     pip install -r requirements.txt
 
-in the showroom directory.
+in the showroom directory, it requires "sudo" command.
 
 ##### 6. (Optional) Install index_maker Dependencies
 
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
 
 Used by by index_maker to generate new Room entries. (index_maker is
-not yet included in this repository)
+not yet included in this repository) requires "sudo" command.
 
     pip install beautifulsoup4
 
 - [lxml](http://lxml.de/)
 
 Fast XML parser used by BeautifulSoup (but not required for it). Needs
-the libxml2 and libxslt C libraries installed.
+the libxml2 and libxslt C libraries installed , it requires "sudo" command.
 
     pip install lxml
 
@@ -218,16 +218,3 @@ containing the following fields:
 ```
 
 More fields may be added in the future.
-
-#### filter.json
-
-TODO
-
-#### completed.json
-
-TODO
-
-
-## Archive Checks
-
-TODO
