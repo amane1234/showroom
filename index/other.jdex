@@ -22,17 +22,5 @@
     "priority": 20,
     "web_url": "https://www.showroom-live.com/modelers",
     "room_id": "52916"
-  },
-  
-   {
-    "jpnName": "test",
-    "engName": "Macross modelers",
-    "jpnTeam": "",
-    "engTeam": "",
-    "jpnGroup": "SP",
-    "engGroup": "SP",
-    "priority": 20,
-    "web_url": "https://www.showroom-live.com/stl_005_hinano",
-    "room_id": "214236"
   }
 ]
