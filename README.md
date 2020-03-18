@@ -20,6 +20,7 @@ is once again not the default mode. To run the script and download
 all streaming rooms to the data directory (by default ~/Downloads/Showroom)
 enter:
 
+    cd showroom
     python3 showroom.py --all
 
 (Using the showroom virtual environment if it was configured.)
