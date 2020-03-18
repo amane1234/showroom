@@ -107,6 +107,7 @@ Or use the Download as ZIP button above.
 
 All required packages can be installed by running:
 
+    cd showroom
     pip install -r requirements.txt
 
 in the showroom directory, it requires "sudo" command.
