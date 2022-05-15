@@ -5,6 +5,7 @@ import datetime
 import logging
 import time
 import os
+import shutil
 
 from .constants import TOKYO_TZ, FULL_DATE_FMT
 from .utils import format_name, strftime
@@ -284,7 +285,7 @@ class Downloader(object):
             raise FileExistsError
         else:
             try:
-                os.replace(srcpath, destpath)
+                shutil.move(srcpath, destpath)
             except FileNotFoundError:
                 download_logger.debug('File not found: {} -> {}'.format(srcpath, destpath))
                 return
@@ -415,8 +416,10 @@ class Downloader(object):
 
         # TODO: rework this whole process to include lhls, and make it configurable
         # and less braindead
-        self._protocol = 'rtmp'
-        self._ffmpeg_container = 'mp4'
+        if not self._protocol:
+            self._protocol = 'rtmp'
+        if not self._ffmpeg_container:
+            self._ffmpeg_container = 'mp4'
         extra_args = []
         # Fall back to HLS if no RTMP stream available
         # Better to do this here or in update_streaming_url?
@@ -433,10 +436,9 @@ class Downloader(object):
 
         # 2020-01-10: those problems were preferrable to completely unwatchable streams
         if self.protocol in ('hls', 'lhls'):
-            extra_args = ["-copyts", "-bsf:a", "aac_adtstoasc"]
-
-        if self.protocol in ('hls', 'lhls') and self._ffmpeg_container == 'mp4':
-            extra_args = ["-bsf:a", "aac_adtstoasc"]
+            extra_args = ["-copyts"]
+            if self._ffmpeg_container == 'mp4':
+                extra_args.extend(["-bsf:a", "aac_adtstoasc"])
 
         # I don't think this is needed?
         # if self._ffmpeg_container == 'ts':
