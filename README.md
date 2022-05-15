@@ -1,5 +1,5 @@
 
-# Showroom Live Watcher
+# Showroom Live Watcher, 몇가지 오류 수정도음했음
 
 ![Python 3.5+](https://img.shields.io/badge/Python-3.5%2B-green.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT_License-blue.svg)
