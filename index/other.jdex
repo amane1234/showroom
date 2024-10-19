@@ -1,5 +1,4 @@
 [
-  
   {
     "jpnName": "MACROSS",
     "engName": "Macross ga tomaranai",
@@ -11,7 +10,6 @@
     "web_url": "https://www.showroom-live.com/mactoma",
     "room_id": "86535"
   },
-  
  {
     "jpnName": "MACROSS",
     "engName": "Macross modelers",
@@ -22,5 +20,5 @@
     "priority": 20,
     "web_url": "https://www.showroom-live.com/modelers",
     "room_id": "52916"
-  }
+  },
 ]
